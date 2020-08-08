@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<!-- saved from url=(0071)https://stat.mosff.ru/ajax.php?do=print_match_protocol&match_id=1380413 -->
+<html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+                    <script type="text/javascript" src="./Протокол_files/require.js"></script>
+<script type="text/javascript">
+    require.config({
+        shim: {
+            'tinyMCE': {
+                exports: 'tinyMCE',
+                init: function () {
+                    this.tinyMCE.DOM.events.domLoaded = true;
+                    return this.tinyMCE;
+                }
+            },
+            'jquery.hoverIntent.minified': { deps: ['jquery'] },
+            'farbtastic/farbtastic': { deps: ['jquery'] },
+            'bootstrap': { deps: ['jquery'] },
+            'jquery.bxslider': { deps: ['jquery'], exports: 'jQuery.fn.bxSlider' },
+            'stupidtable': { deps: ['jquery'] },
+            'jquery.imgareaselect': { deps: ['jquery'] },
+            'jquery.fancybox': { deps: ['jquery'] },
+            'nn.core': { deps: ['jquery', 'jquery.hoverIntent', 'jquery-ui/effect', 'jquery-ui/widgets/autocomplete', 'jquery-ui/widgets/sortable', 'jquery-ui/i18n/datepicker-ru', 'jquery.form', 'jquery.nn_tabs_improved', 'jquery.fancybox'] }
+        },
+        waitSeconds: 300,
+        urlArgs: function(id, url) {
+            return (id === 'ymaps' || id === 'vk') ? '' : '?ver=1.0.54';
+        },
+        baseUrl: "/js",
+        paths: {
+            ymaps: 'https://api-maps.yandex.ru/2.1/?lang=ru_RU',
+            vk: 'https://vk.com/js/api/openapi.js?136',
+            tinyMCE: '/js/tinymce/tinymce.min',
+            'jquery-ui': '/js/jquery-ui/ui',
+            datatables: '/js/data_tables/js/jquery.dataTables.min',
+            'data_tables.bootstrap': '/js/data_tables/js/dataTables.bootstrap'
+        }
+    });
+    NNData = {
+        queue: {
+            _queue: [],
+            ready: false,
+            push: function(item) {
+                this._queue.push(item);
+                this.execute();
+            },
+            execute: function() {
+                if (this.ready) {
+                    var c;
+                    while (c = this._queue.shift()) {
+                        c();
+                    }
+                }
+            }
+        }
+    };
+</script>    
+                <link rel="stylesheet" href="./Протокол_files/phystech.32ffd032.css" type="text/css">
+    
+                <link rel="stylesheet" href="./Протокол_files/print.b77ebbd0.css" type="text/css">
+            <link rel="stylesheet" href="./Протокол_files/font-awesome.0c9918d6.css" type="text/css">
+    
+    <title>Печать документа</title>
+    <link href="./Протокол_files/css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        .dont_print {
+            text-align: center;
+            background: #ccc;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+            position: fixed;
+            left: 0;
+            right: 0;
+            min-height: 50px;
+            overflow: hidden;
+        }
+
+        @media screen {
+            body {
+                background: #ccc;
+            }
+
+            #print_wrap {
+                width: 190mm;
+                background: #ffffff;
+                overflow: hidden;
+                margin: auto;
+                padding-top: 50px;
+            }
+
+            #print {
+                margin: 10mm;
+            }
+        }
+
+        @media print {
+            .dont_print {
+                display: none;
+            }
+
+            div.divFooter {
+                position: absolute;
+                bottom: 0;
+            }
+
+            @page {
+                size: 210mm 297mm;
+                margin: 10mm
+            }
+        }
+
+    </style>
+</head>
+<body>    <div class="dont_print">
+                <button class="btn btn-success btn-lg" style="margin: 10px;" type="button" onclick="window.print();">
+            <i class="fa fa-print"></i> Печать
+        </button>
+    </div>
+    <div id="print_wrap">
+        <div id="print">
+            <style type="text/css">
+
+    .squad-table {
+        width: 98%;
+        margin: 0 1%;
+        page-break-inside: avoid;
+    }
+    .squad-table tr td, .squad-table tr th {
+        padding: 2px 3px;
+        border: 1px solid #000000;
+        color: #000000;
+    }
+
+    .punishment-table tr td, .punishment-table tr th {
+        border: 1px solid #000000;
+    }
+    .punishment-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .time_result {
+        float: left;
+        width: 40%;
+        text-align: right;
+        margin-right: 20px;
+    }
+
+    .team_name {
+        font-size: 14pt;
+        border-bottom: 1px solid #000;
+        text-align: center;
+    }
+    .result_td.main_result {
+        border: 2px solid #000;
+    }
+    .center_align {
+        text-align: center;
+    }
+    .result_td {
+        font-size: 14px;
+        vertical-align: middle;
+        text-align: center;
+        border: 1px solid #000;
+    }
+    .result_subtitle {
+        vertical-align: middle;
+        text-align: center;
+    }
+    .subtitle {
+
+    }
+    .player_number {
+        text-align: right;
+    }
+    .player_stats {
+        text-align: center;
+        vertical-align: middle;
+    }
+</style><div style="width: 100%; margin: 0 auto;">
+
+
+    <div style="width: 20%; height: 120px; float: left;">
+    <img style="max-width: 120px; max-height: 120px; " src="./Протокол_files/logo1015096368.png">
+</div>
+
+<table style="width: 80%">
+    <colgroup>
+        <col style="width: 14%">
+        <col style="width: 15%">
+        <col style="width: 20%">
+        <col style="width: 15%">
+    </colgroup>
+    <tbody><tr>
+        <td>Протокол №</td>
+        <td style="text-align: center">81</td>
+        <td></td>
+        <td>Время начала</td>
+        <td style="text-align: center;">18:00</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td class="subtitle"></td>
+        <td></td>
+        <td></td>
+        <td class="subtitle"></td>
+    </tr>
+    <tr>
+        <td style="height: 10px;">&nbsp;</td>
+    </tr>
+    <tr>
+        <td style="vertical-align: bottom">Соревнование</td>
+        <td style="vertical-align: bottom" colspan="4">ЛФК - дивизион "А"</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td colspan="4" class="subtitle"></td>
+    </tr>
+</tbody></table>
+
+<br style="clear: both">
+
+    <table style="width: 100%">
+    <colgroup>
+        <col style="width: 30%">
+        <col style="width: 8%">
+        <col style="width: 8%">
+        <col style="width: 8%">
+        <col style="width: 8%">
+        <col style="width: 2%">
+        <col style="width: 17%">
+        <col style="width: 2%">
+        <col style="width: 17%">
+    </colgroup>
+    <tbody>
+    <tr>
+        <td class="team_name">Сетунь-Кунцево<small><br>Москва</small></td>
+        <td class="result_td main_result">0</td>
+        <td class="result_td">0</td>
+        <td class="result_td"></td>
+        <td class="result_td"></td>
+        <td></td>
+        <td class="center_align"></td>
+        <td></td>
+        <td class="center_align"></td>
+    </tr>
+    <tr>
+        <td class="subtitle">принимающая команда</td>
+        <td class="result_subtitle">результат матча</td>
+        <td class="result_subtitle">первой половины</td>
+        <td class="result_subtitle">доп. времени</td>
+        <td class="result_subtitle">серия 11-мет.</td>
+        <td class="span"></td>
+        <td class="subtitle">футболки</td>
+        <td class="span"></td>
+        <td class="subtitle">гетры</td>
+    </tr>
+    <tr>
+        <td class="team_name">Буревестник<small><br>Москва</small></td>
+        <td class="result_td main_result">2</td>
+        <td class="result_td">0</td>
+        <td class="result_td"></td>
+        <td class="result_td"></td>
+        <td></td>
+        <td class="center_align"></td>
+        <td></td>
+        <td class="center_align"></td>
+    </tr>
+    <tr>
+        <td class="subtitle">команда гостей</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="span"></td>
+        <td class="subtitle">футболки</td>
+        <td class="span"></td>
+        <td class="subtitle">гетры</td>
+    </tr>
+    </tbody>
+</table>
+
+    <div style="height: 40px;"></div>
+
+    <table style="width: 100%">
+    <colgroup>
+        <col style="width: 10%">
+        <col>
+        <col style="width: 2%">
+        <col style="width: 25%">
+        <col style="width: 2%">
+        <col style="width: 15%">
+    </colgroup>
+    <tbody>
+    <tr>
+        <td><strong>Стадион</strong></td>
+        <td class="center_align">Искра, Москва</td>
+        <td></td>
+        <td class="center_align"></td>
+        <td></td>
+        <td class="center_align"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td class="subtitle">наименование, город</td>
+        <td></td>
+        <td class="subtitle">освещение</td>
+        <td></td>
+        <td class="subtitle">количество зрителей</td>
+    </tr>
+    </tbody>
+</table>
+
+    <div style="height: 10px;"></div>
+
+    <table style="width: 100%">
+    <colgroup>
+        <col style="width: 20%">
+        <col style="width: 80%">
+    </colgroup>
+    <tbody>
+                        <tr>
+                <td><strong>Главный судья</strong></td>
+                <td>                 Роман Рыбаков     </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="subtitle">Фамилиия, имя, категория, город</td>
+            </tr>
+                    <tr>
+                <td><strong>Первый помощник</strong></td>
+                <td>                Владимир Воробьев                      </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="subtitle">Фамилиия, имя, категория, город</td>
+            </tr>
+                    <tr>
+                <td><strong>Второй помощник</strong></td>
+                <td>                Андрей Вакин                      </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="subtitle">Фамилиия, имя, категория, город</td>
+            </tr>
+                    <tr>
+                <td><strong>Инспектор</strong></td>
+                <td>               Владислав Балдынов                       </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="subtitle">Фамилиия, имя, категория, город</td>
+            </tr>
+                </tbody>
+</table>
+
+
+    <div style="height: 20px">&nbsp;</div>
+
+    <div>
+        <table style="width: 100%; page-break-inside: avoid"><tbody><tr>
+    <td style="vertical-align: top; width: 50%;">
+    <table class="squad-table">
+        <colgroup>
+            <col style="width: 5%">
+            <col style="width: 40%">
+            <col style="width: 5%">
+            <col style="width: 14%">
+                            <col style="width: 5%">
+                <col style="width: 10%">
+                                </colgroup>
+        <thead>
+        <tr>
+            <th rowspan="2">№</th>
+            <th rowspan="2">Фамилия Имя</th>
+                        <th rowspan="2" style="width: 50px">СТ</th>
+            <th rowspan="2" style="width: 80px">ЗМ</th>
+            <th colspan="2">Замены</th>        </tr>
+                    <tr>
+                <th>№</th>
+                <th>Мин</th>
+            </tr>
+                </thead>
+        <tbody>
+                                </tbody>
+    </table>
+    </td>
+    <td style="vertical-align: top; width: 50%;">
+    <table class="squad-table">
+        <colgroup>
+            <col style="width: 5%">
+            <col style="width: 40%">
+            <col style="width: 5%">
+            <col style="width: 14%">
+                            <col style="width: 5%">
+                <col style="width: 10%">
+                                </colgroup>
+        <thead>
+        <tr>
+            <th rowspan="2">№</th>
+            <th rowspan="2">Фамилия Имя</th>
+                        <th rowspan="2" style="width: 50px">СТ</th>
+            <th rowspan="2" style="width: 80px">ЗМ</th>
+            <th colspan="2">Замены</th>        </tr>
+                    <tr>
+                <th>№</th>
+                <th>Мин</th>
+            </tr>
+                </thead>
+        <tbody>
+                                </tbody>
+    </table>
+    </td>
+    </tr></tbody></table>
+    </div>
+
+    <div style="height: 20px">&nbsp;</div>
+    <div class="no-page-break">
+    <div style="text-align: center">
+        <strong>Официальные представители</strong>
+    </div>
+    <table style="width: 100%"><tbody><tr>
+            <td style="vertical-align: top; width: 50%;">
+        <table class="squad-table">
+            <tbody><tr>
+                <th>Фамилия И.О.</th>
+                <th>Должность</th>
+            </tr>
+                            <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                            <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                            <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                            <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                            <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                    </tbody></table>
+        </td>
+            <td style="vertical-align: top; width: 50%;">
+        <table class="squad-table">
+            <tbody><tr>
+                <th>Фамилия И.О.</th>
+                <th>Должность</th>
+            </tr>
+                            <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                            <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                            <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                            <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                            <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                    </tbody></table>
+        </td>
+        </tr>
+    </tbody>
+    </table>
+</div>
+
+    <br style="clear: both;">
+
+    <div class="page-break"></div>
+
+
+
+    <div class="no-page-break">
+    <div style="text-align: center">
+        <strong>Предупреждения игрокам</strong>
+    </div>
+
+    <table class="punishment-table">
+        <colgroup>
+            <col style="width: 5%">
+            <col style="width: 25%">
+            <col style="width: 25%">
+            <col style="width: 5%">
+            <col style="width: 40%">
+        </colgroup>
+        <tbody><tr>
+            <th>Номер</th>
+            <th>Фамилия имя</th>
+            <th>Команда</th>
+            <th>Мин</th>
+            <th>Причина</th>
+        </tr>
+
+
+                    <tr>
+                <td class="player_stats"></td>
+                <td>&nbsp;</td>
+                <td></td>
+                <td class="player_stats"> </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="player_stats"></td>
+                <td>&nbsp;</td>
+                <td></td>
+                <td class="player_stats"> </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="player_stats"></td>
+                <td>&nbsp;</td>
+                <td></td>
+                <td class="player_stats"> </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="player_stats"></td>
+                <td>&nbsp;</td>
+                <td></td>
+                <td class="player_stats"> </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="player_stats"></td>
+                <td>&nbsp;</td>
+                <td></td>
+                <td class="player_stats"> </td>
+                <td></td>
+            </tr>
+            </tbody></table>
+</div>
+
+    <div style="height: 20px">&nbsp;</div>
+
+    <div style="text-align: center">
+    <strong>Удаления игроков</strong>
+</div>
+<table class="punishment-table">
+    <colgroup>
+        <col style="width: 5%">
+        <col style="width: 25%">
+        <col style="width: 25%">
+        <col style="width: 5%">
+        <col style="width: 40%">
+    </colgroup>
+    <tbody><tr>
+        <th>Номер</th>
+        <th>Фамилия имя</th>
+        <th>Команда</th>
+        <th>Мин</th>
+        <th>Причина</th>
+    </tr>
+            <tr>
+            <td class="player_stats"></td>
+            <td>&nbsp;</td>
+            <td></td>
+            <td class="player_stats"> </td>
+            <td></td>
+        </tr>
+            <tr>
+            <td class="player_stats"></td>
+            <td>&nbsp;</td>
+            <td></td>
+            <td class="player_stats"> </td>
+            <td></td>
+        </tr>
+            <tr>
+            <td class="player_stats"></td>
+            <td>&nbsp;</td>
+            <td></td>
+            <td class="player_stats"> </td>
+            <td></td>
+        </tr>
+    
+</tbody></table>
+
+
+
+    <div style="height: 20px">&nbsp;</div>
+    <div style="text-align: center">
+    <strong>Травматические случаи</strong>
+</div>
+
+<table class="punishment-table">
+    <colgroup>
+        <col style="width: 25%">
+        <col style="width: 5%">
+        <col style="width: 60%">
+    </colgroup>
+    <tbody><tr>
+        <th>Ф.И.О</th>
+        <th>Мин</th>
+        <th>Характер повреждения, причины, предварительный диагноз, оказанная помощь</th>
+    </tr>
+            <tr>
+            <td class="player_stats">&nbsp;</td>
+            <td class="player_stats"> </td>
+            <td></td>
+        </tr>
+            <tr>
+            <td class="player_stats">&nbsp;</td>
+            <td class="player_stats"> </td>
+            <td></td>
+        </tr>
+            <tr>
+            <td class="player_stats">&nbsp;</td>
+            <td class="player_stats"> </td>
+            <td></td>
+        </tr>
+    
+</tbody></table>
+
+
+    <div style="margin-top: 20px; text-align: center">
+    <strong>Прочие замечания</strong>
+</div>
+
+<div style="min-height: 120px; border: 1px solid #000; padding: 10px;">
+<div></div>
+<div>
+    </div>
+</div>
+
+
+    <div style="height: 30px">&nbsp;</div>
+
+    <table style="width: 100%">
+        <tbody><tr>
+            <td style="width: 48%">Рыбаков Р.А&nbsp;</td>
+            <td style="width: 4%"></td>
+            <td style="width: 48%">Артосян Ж.В&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="subtitle">
+                подпись судьи
+            </td>
+            <td></td>
+            <td class="subtitle">
+                подпись представителя принимающей стороны
+            </td>
+        </tr>
+        <tr>
+            <td style="height: 1.5cm;">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>Завьялов И.К</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td class="subtitle">
+                подпись представителя команды гостей
+            </td>
+        </tr>
+    </tbody></table>
+
+
+</div>
+        </div>
+    </div>
+<script type="text/javascript">
+    !function (w) {
+        "use strict";
+        w.loadOnloadJS = function (b, c, callback) {
+            w.addEventListener("load", function () {
+                loadJS(b, c, callback)
+            }, !1)
+        };
+        w.loadJS = function (b, c, callback) {
+            var d = w.document.createElement("script");
+            d.src = b, d.async = c || !1, w.document.body.appendChild(d);
+            if (typeof callback === "function") {
+                d.onload = d.onerror = function () {
+                    if (!this.executed) { // выполнится только один раз
+                        this.executed = true;
+                        callback();
+                    }
+                };
+
+                d.onreadystatechange = function () {
+                    var self = this;
+                    if (this.readyState === "complete" || this.readyState === "loaded") {
+                        setTimeout(function () {
+                            self.onload()
+                        }, 0);
+                    }
+                };
+            }
+        }
+    }(window);
+</script>
+    
+    <script type="text/javascript">
+            </script>
+
+</body></html>
